@@ -1,0 +1,7 @@
+Flask>=2.0
+python-dotenv
+requests
+flask-cors
+gunicorn
+joblib
+scikit-learn

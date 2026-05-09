@@ -1,0 +1,60 @@
+.analytics-box{
+  --bg: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(250,250,250,0.9));
+  --border: rgba(16,24,40,0.06);
+  --muted: #6b7280;
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:18px 20px;
+  border-radius:12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  margin-bottom:18px;
+  align-items:center;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.analytics-box:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15,23,42,0.09);
+}
+.analytics-box .label-medium{ margin:0; color:var(--muted); font-weight:500 }
+.analytics-box .analytics-left{ flex:1; min-width:0 }
+.analytics-box .analytics-right{ flex:0 0 160px; text-align:right }
+
+.analytics-box .title { display:block; font-size:1rem; font-weight:700; color:#0f172a; margin-bottom:6px }
+.analytics-box .stat { font-size:1.05rem; font-weight:600; color:#111827 }
+.analytics-box .sub { font-size:.9rem; color:var(--muted) }
+
+/* make the layout stack on small screens */
+@media (max-width:640px) {
+  .analytics-box{ flex-direction:column; align-items:flex-start; gap:10px; padding:14px }
+  .analytics-box .analytics-right{ width:100%; text-align:left }
+}
+
+/* Analytics card wrapper (used by renderAnalytics) */
+.analytics-card{
+  padding:18px 20px;
+  margin:14px 0 20px;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
+  border: 1px solid rgba(16,24,40,0.04);
+  box-shadow: 0 8px 20px rgba(15,23,42,0.04);
+}
+.analytics-card h2{ margin:0 0 6px; padding-top:4px; font-size:1.15rem }
+.analytics-card p{ margin:4px 0; }
+
+/* small padding for the saved recipes article so top text doesn't touch header */
+.saved-recipe-page{ padding-top:12px; }
+
+/* dark theme tweaks */
+@media (prefers-color-scheme: dark) {
+  .analytics-box{
+    --bg: linear-gradient(180deg, rgba(8,10,12,0.48), rgba(7,9,11,0.42));
+    --border: rgba(255,255,255,0.04);
+    --muted: #9ca3af;
+    box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+  }
+  .analytics-box .title { color:#f8fafc }
+  .analytics-box .stat { color:#f1f5f9 }
+}

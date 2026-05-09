@@ -1,0 +1,60 @@
+.predict-panel{
+  max-width:920px;
+  margin:40px auto;
+  padding:18px;
+}
+
+.predict-box{
+  background: linear-gradient(180deg, #ffffff, #fbfbfb);
+  border-radius:14px;
+  padding:22px;
+  box-shadow: 0 18px 40px rgba(15,23,42,0.06);
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+.header-inner{ display:flex; align-items:center; justify-content:space-between; max-width:1100px; margin:0 auto; padding:14px 18px }
+.site-logo{ font-weight:800; color:#ef4444; font-size:22px; text-decoration:none }
+.header-nav a{ color:#374151; margin-left:12px; text-decoration:none; font-weight:500 }
+.header-nav a:hover{ text-decoration:underline }
+
+.predict-head{ margin-bottom:10px }
+.predict-title{ margin:0 0 6px; font-size:20px }
+.hint{ color:#6b7280; margin:0 0 12px }
+
+label{ display:block; font-weight:600; margin:6px 0 8px }
+textarea{ width:100%; min-height:160px; padding:14px; border-radius:10px; border:1px solid #e9e9ee; resize:vertical; font-size:15px; line-height:1.4; color:#111827 }
+
+.row.actions{ display:flex; gap:12px; align-items:center; margin-top:14px }
+.btn{ padding:10px 14px; border-radius:10px; border:none; cursor:pointer; font-weight:700 }
+.btn.primary{ background: linear-gradient(90deg,#fb7185,#f97316); color:#fff }
+.btn.primary:disabled{ opacity:0.6; cursor:default }
+
+.kbd{ color:#6b7280; font-size:13px; margin-left:auto }
+
+/* spinner */
+.spinner{ width:22px; height:22px; border-radius:50%; border:3px solid rgba(0,0,0,0.08); border-top-color:#ef4444; animation: spin 1s linear infinite }
+@keyframes spin{ to{ transform: rotate(360deg) } }
+
+/* result */
+.result-card{ margin-top:18px }
+.result-card .inner{ padding:12px 14px; border-radius:10px; background: linear-gradient(180deg,#fff,#fcfcfc); border:1px solid rgba(15,23,42,0.04); box-shadow:0 6px 18px rgba(15,23,42,0.03) }
+.result-card .label{ font-size:13px; color:#6b7280 }
+.result-card .value{ margin-top:6px; font-size:18px; font-weight:800; color:#0f172a }
+
+/* small screens */
+@media (max-width:640px){
+  .predict-panel{ margin:20px 12px }
+  .header-inner{ padding:10px 12px }
+  .predict-box{ padding:16px }
+  .kbd{ display:none }
+}
+
+/* dark tweaks */
+@media (prefers-color-scheme: dark){
+  .predict-box{ background: linear-gradient(180deg,#07101a,#061016); box-shadow: 0 18px 40px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.04) }
+  .site-logo{ color:#ffb4a2 }
+  .header-nav a{ color:#cbd5e1 }
+  textarea{ background: #041019; border:1px solid rgba(255,255,255,0.04); color:#e6eef6 }
+  .hint, .kbd{ color:#9ca3af }
+  .result-card .inner{ background: linear-gradient(180deg,#08121a,#061018) }
+}

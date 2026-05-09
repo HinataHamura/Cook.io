@@ -1,0 +1,18 @@
+
+<svg width="500" height="90" viewBox="0 0 500 90" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="500" height="90" fill="#f8f8f8"/>
+
+  <!-- Text: POWERED by -->
+  <text x="20" y="52" fill="#999" font-size="12" letter-spacing="1.5">
+    POWERED <tspan font-weight="bold" fill="#999">by</tspan>
+  </text>
+
+  <!-- Circle icon (moved right for spacing) -->
+  <circle cx="180" cy="46" r="18" fill="#76C043"/>
+
+  <!-- Spoon icon -->
+  <path d="M178 36c-2 2-2 5 0 7l2 2v10h4V45l2-2c2-2 2-5 0-7s-5-2-7 0z" fill="white"/>
+
+  <!-- Brand text -->
+  <text x="205" y="54" fill="#76C043" font-size="26" font-weight="bold">SPOONACULAR</text>
+</svg>

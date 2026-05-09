@@ -1,0 +1,29 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/recipe/:id"
+  to = "/.netlify/functions/recipe/:id"
+  status = 200
+
+[[redirects]]
+  from = "/api/search"
+  to = "/.netlify/functions/search"
+  status = 200
+
+[[redirects]]
+  from = "/api/health"
+  to = "/.netlify/functions/health"
+  status = 200
+
+[[redirects]]
+  from = "/api/predict-category"
+  to = "/.netlify/functions/predict-category"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/login.html"
+  status = 302
+  force = true

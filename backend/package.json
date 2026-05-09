@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "coverage": "jest --coverage",
+    "integration-test": "set NODE_ENV=test&&node --test tests/integration"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.4"
+  }
+  ,
+  "devDependencies": {
+    "jest": "^29.6.0",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "extensionsToTreatAsEsm": [".js"],
+    "coverageDirectory": "./coverage",
+    "collectCoverageFrom": ["**/*.js", "!node_modules/**"]
+  }
+}
